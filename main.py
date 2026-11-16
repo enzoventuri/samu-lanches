@@ -208,6 +208,7 @@ def exibir_menu():
     print("=" * 45)
 
 
+
 def main():
     """Executa o programa principal."""
 
@@ -224,8 +225,7 @@ def main():
 
             cadastrar_produto(lanchonete)
 
-            # Se o cadastro não gerou erro, mostra a pausa.
-            # Em caso de erro, mostrar_erro já fez a pausa.
+            # O cadastro controla sua própria pausa.
 
         elif opcao == "2":
 
@@ -240,11 +240,9 @@ def main():
 
             if nome:
                 lanchonete.buscar_produto(nome)
+                pausar()
             else:
                 mostrar_erro("O nome não pode ser vazio.")
-
-            if nome:
-                pausar()
 
         elif opcao == "4":
 
@@ -263,10 +261,6 @@ def main():
             mostrar_erro(
                 "Opção inválida! Escolha uma opção entre 0 e 4."
             )
-
-        # Aguarda ENTER depois de um cadastro bem-sucedido.
-        if opcao == "1":
-            pausar()
 
 
 if __name__ == "__main__":
