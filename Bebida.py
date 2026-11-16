@@ -6,7 +6,7 @@ Este módulo representa itens do tipo bebida, aplicando herança da classe Produ
 encapsulamento de atributos e polimorfismo.
 """
 
-import Produto
+from Produto import Produto
 
 
 class Bebida(Produto):

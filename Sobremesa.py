@@ -1,6 +1,6 @@
 """Módulo contendo a classe Sobremesa para a Lanchonete (Delivery)."""
 
-from produto import Produto
+from Produto import Produto
 
 
 class Sobremesa(Produto):

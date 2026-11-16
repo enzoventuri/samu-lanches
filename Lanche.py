@@ -1,7 +1,7 @@
 # Carlos
 """Módulo contendo a classe Lanche, especializada de Produto."""
 
-import Produto
+from Produto import Produto
 
 
 class Lanche(Produto):
