@@ -53,7 +53,7 @@ class Sobremesa(Produto):
         return self.__cobertura_extra
 
     def adicionar_cobertura(self, cobertura: str) -> None:
-        """Método exclusivo: adiciona um acompanhamento/cobertura à sobremesa."""
+        """  Método exclusivo: adiciona um acompanhamento/cobertura à sobremesa.  """
         if cobertura.strip():
             self.__cobertura_extra = cobertura
             print(f"Cobertura '{cobertura}' adicionada à sobremesa {self.nome}!")
