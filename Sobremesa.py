@@ -4,20 +4,10 @@ from Produto import Produto
 
 
 class Sobremesa(Produto):
-    """Classe que representa uma Sobremesa no sistema de delivery.
 
-    Herda da classe base Produto.
-    """
 
     def __init__(self, nome: str, preco: float, temperatura: str, calorias: int):
-        """Inicializa os atributos da Sobremesa.
 
-        Args:
-            nome (str): Nome da sobremesa.
-            preco (float): Preço unitário.
-            temperatura (str): Temperatura de serviço (ex: Gelada, Quente).
-            calorias (int): Quantidade de calorias em kcal.
-        """
         super().__init__(nome, preco)
         self.__temperatura = temperatura
         self.calorias = calorias  # Utiliza o setter com validação
@@ -25,12 +15,10 @@ class Sobremesa(Produto):
 
     @property
     def temperatura(self) -> str:
-        """Retorna a temperatura ideal para consumo."""
         return self.__temperatura
 
     @temperatura.setter
     def temperatura(self, nova_temperatura: str) -> None:
-        """Define a temperatura de serviço."""
         if not nova_temperatura.strip():
             raise ValueError("A temperatura não pode ser vazia.")
         self.__temperatura = nova_temperatura
