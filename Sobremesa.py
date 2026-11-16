@@ -72,7 +72,7 @@ class Sobremesa(Produto):
         )
 
     def __str__(self) -> str:
-        """Retorna a representação textual legível do objeto."""
+        """ Retorna a representação textual legível do objeto. """
         base_str = super().__str__()
         return (
             f"{base_str} | Tipo: Sobremesa | Servir: {self.__temperatura} | "
