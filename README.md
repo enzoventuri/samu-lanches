@@ -1,176 +1,255 @@
 ﻿
-#  Samu Lanches
+# 🍔 Sistema de Lanchonete Delivery
 
-##  Sobre o Projeto
+**Projeto de Programação Orientada a Objetos – SENAI**
 
-O **Samu Lanches** é um sistema desenvolvido em Python para simular o gerenciamento de uma lanchonete com serviço de delivery. O objetivo é facilitar o cadastro, a consulta e a organização dos produtos oferecidos pela lanchonete.
+## 📌 Sobre o Projeto
 
-O sistema funciona pelo terminal e utiliza os conceitos de Programação Orientada a Objetos (POO), como encapsulamento, herança e polimorfismo.
+O Sistema de Lanchonete Delivery é um projeto desenvolvido em Python com o objetivo de organizar e gerenciar os produtos de uma lanchonete.
 
-## 🎯 Objetivo
+O sistema funciona pelo terminal e permite cadastrar, listar, buscar e preparar diferentes tipos de produtos, utilizando os conceitos fundamentais da Programação Orientada a Objetos (POO).
 
-Desenvolver um sistema simples que permita gerenciar os produtos de uma lanchonete, organizando diferentes tipos de produtos e demonstrando a aplicação dos principais conceitos da programação orientada a objetos.
+O projeto foi desenvolvido como atividade prática do SENAI, utilizando Python, PyCharm, Git e GitHub.
 
-## 👨‍💻 Integrantes do Grupo
+## 👥 Integrantes
 
-- Integrante 1: Samuel
-- Integrante 2: Carlos
-- Integrante 3: Enzo
-- Integrante 4: Lucca
+- Enzo Venturi
+- Samuel Friedrichsen
+- Lucca Reck
+- Carlos Barreto
 
-**Instituição:** SENAI  
-**Linguagem:** Python  
-**IDE:** PyCharm  
-**Versionamento:** Git e GitHub
+**Turma:** 2922
 
-## 🏗️ Estrutura das Classes
+## 🎯 Objetivos do Sistema
 
-### 1. Produto (Classe Base)
+- Cadastrar lanches, bebidas e sobremesas.
+- Listar todos os produtos cadastrados.
+- Buscar produtos pelo nome.
+- Simular a preparação dos produtos.
+- Aplicar encapsulamento, herança e polimorfismo.
+- Praticar o versionamento colaborativo com Git e GitHub.
 
-Representa um produto geral da lanchonete.
-
-**Atributos:**
-- Nome
-- Preço
-- Código
-
-**Métodos:**
-- Exibir informações do produto.
-- Calcular o valor do produto.
-- `__str__()` para apresentar os dados.
-
-### 2. Lanche (Classe Filha)
-
-Representa os lanches vendidos pela lanchonete.
-
-**Atributos próprios:**
-- Ingredientes
-- Tamanho
-
-**Métodos:**
-- Exibir os ingredientes do lanche.
-- Sobrescrever o método de cálculo ou descrição do produto.
-
-### 3. Bebida (Classe Filha)
-
-Representa as bebidas disponíveis no cardápio.
-
-**Atributos próprios:**
-- Volume em ml
-- Tipo de bebida
-
-**Métodos:**
-- Exibir informações da bebida.
-- Sobrescrever o método de cálculo ou descrição do produto.
-
-### 4. Lanchonete (Classe Gerenciadora)
-
-Responsável por administrar os produtos cadastrados.
-
-**Métodos:**
-- Cadastrar produtos.
-- Listar produtos.
-- Buscar produtos.
-- Executar ações nos diferentes tipos de produtos.
-
-## 🔄 Diagrama de Classes
-
-```text
-              +------------------+
-              |     Produto      |
-              +------------------+
-              | - __nome         |
-              | - __preco        |
-              | - __codigo       |
-              +------------------+
-              | + __str__()      |
-              | + calcular()     |
-              +------------------+
-                       |
-             +---------+---------+
-             |                   |
-    +----------------+  +----------------+
-    |     Lanche     |  |     Bebida     |
-    +----------------+  +----------------+
-    | - ingredientes |  | - volume_ml    |
-    | - tamanho      |  | - tipo         |
-    +----------------+  +----------------+
-    | + calcular()   |  | + calcular()   |
-    +----------------+  +----------------+
-             \                   /
-              \                 /
-               +---------------+
-                       |
-              +------------------+
-              |    Lanchonete    |
-              +------------------+
-              | - __produtos     |
-              +------------------+
-              | + cadastrar()    |
-              | + listar()       |
-              | + buscar()       |
-              | + executar()     |
-              +------------------+
-```
-
-## 🧠 Conceitos de POO Aplicados
-
-- **Encapsulamento:** os atributos são privados ou protegidos, sendo acessados por meio de getters e setters ou propriedades. Os setters possuem validações para impedir dados inválidos.
-- **Herança:** as classes `Lanche` e `Bebida` herdam os atributos e métodos da classe `Produto`, utilizando `super().__init__()` em seus construtores.
-- **Polimorfismo:** as classes filhas sobrescrevem um método da classe base, permitindo que cada tipo de produto apresente um comportamento diferente.
-- **Classes e objetos:** o sistema utiliza classes para organizar os produtos e objetos para representar os itens cadastrados.
-
-## ⚙️ Funcionalidades do Sistema
-
-O sistema possui um menu interativo no terminal com as seguintes opções:
-
-1. Cadastrar produto.
-2. Listar produtos cadastrados.
-3. Buscar produto.
-4. Executar ação polimórfica.
-5. Sair do sistema.
-
-## 📂 Organização dos Arquivos
-
-```text
-samu-lanches/
-│
-├── main.py
-├── produto.py
-├── lanche.py
-├── bebida.py
-├── lanchonete.py
-├── README.md
-└── .gitignore
-```
-
-## ▶️ Como Executar o Projeto
-
-1. Faça o clone do repositório:
-
-```bash
-git clone LINK_DO_REPOSITORIO
-```
-
-2. Abra a pasta do projeto no PyCharm.
-
-3. Verifique se o Python está instalado.
-
-4. Execute o arquivo `main.py`.
-
-5. Utilize as opções do menu para cadastrar, listar, buscar e executar ações dos produtos.
-
-## 🔧 Tecnologias Utilizadas
+## 🛠️ Tecnologias Utilizadas
 
 - Python 3
 - PyCharm
 - Git
 - GitHub
 
-## 📌 Considerações Finais
+## 📂 Estrutura do Projeto
 
-O projeto **Samu Lanches** foi desenvolvido como atividade prática do SENAI, com o objetivo de aplicar os conceitos de Programação Orientada a Objetos utilizando Python.
+```text
+Lanchonete/
+│
+├── main.py
+├── Produto.py
+├── Lanche.py
+├── Bebida.py
+├── Sobremesa.py
+├── README.md
+└── .gitignore
+```
 
-Durante o desenvolvimento, o grupo pôde praticar a criação de classes, objetos, encapsulamento, herança, polimorfismo e trabalho colaborativo com Git e GitHub.
+## 🧩 Descrição das Classes
 
-O sistema representa um protótipo inicial de gerenciamento de uma lanchonete, podendo futuramente receber novas funcionalidades, como controle de pedidos, carrinho de compras, formas de pagamento e cadastro de clientes.
+### 1. Produto (Classe Base)
+
+Representa um produto genérico da lanchonete.
+
+**Atributos:**
+- Nome
+- Preço
+- Quantidade em estoque
+
+**Métodos:**
+- Getters e setters com validação.
+- `calcular_preco_final()`
+- `preparar()`
+- `__str__()`
+
+### 2. Lanche (Classe Filha)
+
+Representa os lanches vendidos pela lanchonete.
+
+**Atributos próprios:**
+- Tipo de pão
+- Ingredientes
+
+**Métodos próprios:**
+- `adicionar_ingrediente()`
+- `preparar()`
+- `__str__()`
+
+### 3. Bebida (Classe Filha)
+
+Representa as bebidas disponíveis para delivery.
+
+**Atributos próprios:**
+- Tamanho em mililitros
+- Estado térmico (gelada ou não)
+
+**Métodos próprios:**
+- `servir_com_gelo()`
+- `preparar()`
+- `__str__()`
+
+### 4. Sobremesa (Classe Filha)
+
+Representa as sobremesas comercializadas pela lanchonete.
+
+**Atributos próprios:**
+- Temperatura
+- Calorias
+- Cobertura extra
+
+**Métodos próprios:**
+- `adicionar_cobertura()`
+- `eh_diet()`
+- `preparar()`
+- `__str__()`
+
+### 5. Lanchonete (Classe Gerenciadora)
+
+Responsável por administrar os produtos cadastrados.
+
+Está implementada no arquivo `main.py`.
+
+**Responsabilidades:**
+- Armazenar os produtos em uma lista privada.
+- Cadastrar produtos.
+- Listar produtos.
+- Buscar produtos pelo nome.
+- Executar a preparação dos produtos.
+
+## 📊 Diagrama de Classes
+
+```text
+                 ┌──────────────────┐
+                 │     Produto      │
+                 ├──────────────────┤
+                 │ - __nome         │
+                 │ - __preco        │
+                 │ - __quantidade   │
+                 ├──────────────────┤
+                 │ + preparar()     │
+                 │ + __str__()      │
+                 └────────┬─────────┘
+                          │
+              ┌───────────┼───────────┐
+              │           │           │
+       ┌──────▼────┐ ┌────▼─────┐ ┌───▼────────┐
+       │   Lanche  │ │  Bebida  │ │ Sobremesa  │
+       ├───────────┤ ├──────────┤ ├────────────┤
+       │ - __pao   │ │ - _tamanho│ │ - __temperatura
+       │ - _ingred.│ │ - _gelada │ │ - __calorias
+       ├───────────┤ ├──────────┤ ├────────────┤
+       │ + preparar│ │ + preparar│ │ + preparar │
+       └───────────┘ └──────────┘ └────────────┘
+
+                 ┌──────────────────┐
+                 │    Lanchonete    │
+                 ├──────────────────┤
+                 │ - __produtos     │
+                 ├──────────────────┤
+                 │ + cadastrar()    │
+                 │ + listar()       │
+                 │ + buscar()       │
+                 │ + preparar()     │
+                 └──────────────────┘
+```
+
+## 🧠 Conceitos de POO Aplicados
+
+### Encapsulamento
+
+Os atributos são protegidos ou privados, utilizando propriedades (`@property`), getters e setters para controlar o acesso e validar os dados.
+
+Exemplos de validações:
+- O nome do produto não pode ser vazio.
+- O preço deve ser maior que zero.
+- O volume da bebida deve ser positivo.
+- A quantidade de calorias deve ser válida.
+
+### Herança
+
+As classes Lanche, Bebida e Sobremesa herdam os atributos e métodos da classe Produto.
+
+A utilização de `super().__init__()` permite reaproveitar o construtor da classe base.
+
+### Polimorfismo
+
+As classes filhas sobrescrevem o método `preparar()`.
+
+Dessa maneira, cada tipo de produto apresenta um comportamento diferente quando o sistema percorre a lista de produtos e executa o mesmo método.
+
+## 💻 Funcionalidades do Menu
+
+O sistema apresenta as seguintes opções:
+
+| Opção | Funcionalidade |
+|---|---|
+| 1 | Cadastrar produto |
+| 2 | Listar produtos |
+| 3 | Buscar produto |
+| 4 | Preparar produtos |
+| 0 | Sair do sistema |
+
+O menu permanece ativo até o usuário escolher a opção de saída.
+
+O sistema também possui tratamento de erros para entradas inválidas e validações dos dados informados.
+
+## ▶️ Como Executar o Projeto
+
+**1.** Instale o Python 3 em seu computador.
+
+**2.** Clone o repositório:
+
+```bash
+git clone URL_DO_REPOSITORIO
+```
+
+**3.** Abra a pasta do projeto no PyCharm.
+
+**4.** Verifique se todos os arquivos estão na mesma pasta.
+
+**5.** Execute o arquivo `main.py`.
+
+```bash
+python main.py
+```
+
+**6.** Utilize o menu apresentado no terminal para interagir com o sistema.
+
+## 🔀 Versionamento com Git e GitHub
+
+O desenvolvimento do projeto é realizado de forma colaborativa utilizando Git e GitHub.
+
+Todos os integrantes participam do desenvolvimento por meio de commits individuais na branch `main`.
+
+Fluxo de trabalho utilizado:
+
+```bash
+git pull
+git add .
+git commit -m "Descrição da alteração"
+git push
+```
+
+O arquivo `.gitignore` é utilizado para evitar o envio de arquivos desnecessários, como:
+
+- `__pycache__/`
+- `.idea/`
+- 
+## 📚 Aprendizados
+
+Durante o desenvolvimento do projeto, foram trabalhados conceitos importantes de programação, como:
+
+- Criação e organização de classes e objetos.
+- Encapsulamento e validação de atributos.
+- Herança e reutilização de código.
+- Polimorfismo e sobrescrita de métodos.
+- Manipulação de listas e estruturas de repetição.
+- Entrada e saída de dados pelo terminal.
+- Tratamento de exceções.
+- Versionamento e colaboração utilizando Git e GitHub.
+

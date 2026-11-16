@@ -8,13 +8,13 @@ class Produto:
     e sobrescrevem o método calcular_preco_final().
     """
 
-    def __init__(self, nome, preco, quantidade_estoque):
+    def __init__(self, nome, preco, quantidade_estoque=0):
         """Inicializa um produto.
 
         Args:
             nome (str): nome do produto (não pode ser vazio).
             preco (float): preço unitário (deve ser maior que zero).
-            quantidade_estoque (int): quantidade disponível (não pode ser negativa).
+            quantidade_estoque (int, optional): quantidade disponível (não pode ser negativa). Padrão é 0.
         """
         self.__nome = None
         self.__preco = None

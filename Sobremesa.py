@@ -1,19 +1,12 @@
 
-from produto import Produto
+from Produto import Produto
 
 
 class Sobremesa(Produto):
 
 
     def __init__(self, nome: str, preco: float, temperatura: str, calorias: int):
-        """Inicializa os atributos da Sobremesa.
 
-        Args:
-            nome (str): Nome da sobremesa.
-            preco (float): Preço unitário.
-            temperatura (str): Temperatura de serviço (ex: Gelada, Quente).
-            calorias (int): Quantidade de calorias em kcal.
-        """
         super().__init__(nome, preco)
         self.__temperatura = temperatura
         self.calorias = calorias  # Utiliza o setter com validação
