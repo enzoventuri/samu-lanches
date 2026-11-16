@@ -25,7 +25,6 @@ class Sobremesa(Produto):
 
     @property
     def calorias(self) -> int:
-        """Retorna o valor calórico em kcal."""
         return self.__calorias
 
     @calorias.setter
@@ -37,7 +36,6 @@ class Sobremesa(Produto):
 
     @property
     def cobertura_extra(self) -> str:
-        """Retorna a cobertura extra adicionada."""
         return self.__cobertura_extra
 
     def adicionar_cobertura(self, cobertura: str) -> None:
