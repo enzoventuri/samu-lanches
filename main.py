@@ -37,7 +37,7 @@ def mostrar_erro(mensagem):
 
 def exibir_menu():
     """Exibe o menu principal."""
-    exibir_titulo("SISTEMA LANCHONETE DELIVERY")
+    exibir_titulo("SAMULANCHES")
     print("1 - Cadastrar produto")
     print("2 - Listar produtos")
     print("3 - Buscar produto")
